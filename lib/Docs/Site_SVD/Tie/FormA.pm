@@ -10,31 +10,33 @@ use warnings;
 use warnings::register;
 
 use vars qw($VERSION $DATE $FILE );
-$VERSION = '0.01';
-$DATE = '2004/06/01';
+$VERSION = '0.02';
+$DATE = '2004/06/03';
 $FILE = __FILE__;
 
 use vars qw(%INVENTORY);
 %INVENTORY = (
-    'lib/Docs/Site_SVD/Tie/FormA.pm' => [qw(0.01 2004/06/01), 'revised 0.02'],
-    'MANIFEST' => [qw(0.01 2004/06/01), 'generated, replaces 0.02'],
-    'Makefile.PL' => [qw(0.01 2004/06/01), 'generated, replaces 0.02'],
-    'README' => [qw(0.01 2004/06/01), 'generated, replaces 0.02'],
-    'lib/Tie/FormA.pm' => [qw(0.01 2004/06/01), 'new'],
-    'lib/Bundle/Tie/FormA.pm' => [qw(0.01 2004/06/01), 'new'],
-    't/Tie/FormA.d' => [qw(0.01 2004/06/01), 'new'],
-    't/Tie/FormA.pm' => [qw(0.01 2004/06/01), 'new'],
-    't/Tie/FormA.t' => [qw(0.01 2004/06/01), 'new'],
-    't/Tie/FormA/lenient0.txt' => [qw(0.01 2004/06/01), 'new'],
-    't/Tie/FormA/lenient2.txt' => [qw(0.01 2004/06/01), 'new'],
-    't/Tie/FormA/strict0.txt' => [qw(0.01 2004/06/01), 'new'],
-    't/Tie/Test.pm' => [qw(1.25 2004/04/28), 'new'],
-    't/Tie/Algorithm/Diff.pm' => [qw(1.15 ), 'new'],
-    't/Tie/File/SmartNL.pm' => [qw(1.17 2004/05/24), 'revised 1.16'],
-    't/Tie/File/Package.pm' => [qw(1.18 2004/05/24), 'revised 1.17'],
-    't/Tie/Test/Tech.pm' => [qw(1.27 2004/05/28), 'revised 1.25'],
-    't/Tie/Data/Secs2.pm' => [qw(1.26 2004/05/24), 'revised 1.23'],
-    't/Tie/Data/Str2Num.pm' => [qw(0.08 2004/05/24), 'new'],
+    'lib/Docs/Site_SVD/Tie/FormA.pm' => [qw(0.02 2004/06/03), 'revised 0.01'],
+    'MANIFEST' => [qw(0.02 2004/06/03), 'generated, replaces 0.01'],
+    'Makefile.PL' => [qw(0.02 2004/06/03), 'generated, replaces 0.01'],
+    'README' => [qw(0.02 2004/06/03), 'generated, replaces 0.01'],
+    'lib/Tie/FormA.pm' => [qw(0.02 2004/06/03), 'revised 0.01'],
+    'lib/Bundle/Tie/FormA.pm' => [qw(0.02 2004/06/03), 'revised 0.01'],
+    't/Tie/FormA.d' => [qw(0.02 2004/06/03), 'revised 0.01'],
+    't/Tie/FormA.pm' => [qw(0.02 2004/06/03), 'revised 0.01'],
+    't/Tie/FormA.t' => [qw(0.02 2004/06/03), 'revised 0.01'],
+    't/Tie/FormA/lenient0.txt' => [qw(0.01 2004/06/01), 'unchanged'],
+    't/Tie/FormA/lenient2.txt' => [qw(0.01 2004/06/01), 'unchanged'],
+    't/Tie/FormA/strict0.txt' => [qw(0.01 2004/06/01), 'unchanged'],
+    't/digest.t' => [qw(0.01 2004/06/03), 'new'],
+    't/File/Digest.pm' => [qw(1.14 2004/05/03), 'new'],
+    't/Tie/Test.pm' => [qw(1.25 2004/04/28), 'unchanged'],
+    't/Tie/Algorithm/Diff.pm' => [qw(1.15 ), 'unchanged'],
+    't/Tie/File/SmartNL.pm' => [qw(1.16 2004/05/24), 'unchanged'],
+    't/Tie/File/Package.pm' => [qw(1.18 2004/05/24), 'unchanged'],
+    't/Tie/Test/Tech.pm' => [qw(1.27 2004/05/28), 'unchanged'],
+    't/Tie/Data/Secs2.pm' => [qw(1.26 2004/05/24), 'unchanged'],
+    't/Tie/Data/Str2Num.pm' => [qw(0.08 2004/05/24), 'unchanged'],
 
 );
 
@@ -55,29 +57,29 @@ use vars qw(%INVENTORY);
 
 =head1 NAME
 
-Tie::FormA - Text Database that mimics a Form
+Docs::Site_SVD::Tie::FormA - Software Version Description (SVD) for the Tie::FormA program module.
 
 =head1 Title Page
 
- Software Version Description
+Software Version Description
 
- for
+for
 
- Tie::FormA - Text Database that mimics a Form
+Tie::FormA - Text Database that mimics a Form
 
- Revision: -
+Revision: A
 
- Version: 0.01
+Version: 0.02
 
- Date: 2004/06/01
+Date: 2004/06/03
 
- Prepared for: General Public 
+Prepared for: General Public 
 
- Prepared by:  SoftwareDiamonds.com E<lt> support@SoftwareDiamonds.comE <gt>
+Prepared by:  SoftwareDiamonds.com E<lt> support@SoftwareDiamonds.comE <gt>
 
- Copyright: copyright © 2003 Software Diamonds
+Copyright: copyright © 2003 Software Diamonds
 
- Classification: NONE
+Classification: NONE
 
 =head1 1.0 SCOPE
 
@@ -152,7 +154,7 @@ Perl or any other programming language to process.
 
 =head2 1.3 Document overview.
 
-This document releases Tie::FormA version 0.01
+This document releases Tie::FormA version 0.02
 providing description of the inventory, installation
 instructions and other information necessary to
 utilize and track this release.
@@ -167,7 +169,7 @@ system file specification.
 
 This document releases the file 
 
- Tie-FormA-0.01.tar.gz
+ Tie-FormA-0.02.tar.gz
 
 found at the following repository(s):
 
@@ -199,12 +201,12 @@ following conditions are met:
 =item 1
 
 Redistributions of source code, modified or unmodified
-must retain the above copyright notice, this list of
+shall[1] retain the above copyright notice, this list of
 conditions and the following disclaimer. 
 
 =item 2
 
-Redistributions in binary form must 
+Redistributions in binary form shall[2]
 reproduce the above copyright notice,
 this list of conditions and the following 
 disclaimer in the documentation and/or
@@ -216,24 +218,30 @@ distribution.
 In addition to condition (1) and (2),
 commercial installation of a software product
 with the binary or source code embedded in the
-software product or a software product of the
+software product or a software product of
 binary or source code, with or without modifications,
-must visually present to the installer 
+shall[3] visually present to the installer 
 the above copyright notice,
 this list of conditions intact,
 that the original source is available
 at http://packages.softwarediamonds.com
 and provide means for the installer to actively accept
 the list of conditions; 
-otherwise, the commerical activity,
+otherwise, the commercial activity,
 as determined by Software Diamonds and
 published at http://packages.softwarediamonds.com, 
-shall pay a license fee to
-Software Diamonds and shall make donations,
+shall[4] pay a license fee to
+Software Diamonds and shall[5] make donations,
 to open source repositories carrying
 the source code.
 
 =back
+
+The construction of the word "shall[x]" is always mandatory 
+and not merely directory and identifies each binding
+requirement of this License. 
+It is the responsibility of the licensee to
+conform to all requirements.
 
 SOFTWARE DIAMONDS, http://www.SoftwareDiamonds.com,
 PROVIDES THIS SOFTWARE 
@@ -261,25 +269,27 @@ consists of the following files:
 
  file                                                         version date       comment
  ------------------------------------------------------------ ------- ---------- ------------------------
- lib/Docs/Site_SVD/Tie/FormA.pm                               0.01    2004/06/01 revised 0.02
- MANIFEST                                                     0.01    2004/06/01 generated, replaces 0.02
- Makefile.PL                                                  0.01    2004/06/01 generated, replaces 0.02
- README                                                       0.01    2004/06/01 generated, replaces 0.02
- lib/Tie/FormA.pm                                             0.01    2004/06/01 new
- lib/Bundle/Tie/FormA.pm                                      0.01    2004/06/01 new
- t/Tie/FormA.d                                                0.01    2004/06/01 new
- t/Tie/FormA.pm                                               0.01    2004/06/01 new
- t/Tie/FormA.t                                                0.01    2004/06/01 new
- t/Tie/FormA/lenient0.txt                                     0.01    2004/06/01 new
- t/Tie/FormA/lenient2.txt                                     0.01    2004/06/01 new
- t/Tie/FormA/strict0.txt                                      0.01    2004/06/01 new
- t/Tie/Test.pm                                                1.25    2004/04/28 new
- t/Tie/Algorithm/Diff.pm                                      1.15               new
- t/Tie/File/SmartNL.pm                                        1.17    2004/05/24 revised 1.16
- t/Tie/File/Package.pm                                        1.18    2004/05/24 revised 1.17
- t/Tie/Test/Tech.pm                                           1.27    2004/05/28 revised 1.25
- t/Tie/Data/Secs2.pm                                          1.26    2004/05/24 revised 1.23
- t/Tie/Data/Str2Num.pm                                        0.08    2004/05/24 new
+ lib/Docs/Site_SVD/Tie/FormA.pm                               0.02    2004/06/03 revised 0.01
+ MANIFEST                                                     0.02    2004/06/03 generated, replaces 0.01
+ Makefile.PL                                                  0.02    2004/06/03 generated, replaces 0.01
+ README                                                       0.02    2004/06/03 generated, replaces 0.01
+ lib/Tie/FormA.pm                                             0.02    2004/06/03 revised 0.01
+ lib/Bundle/Tie/FormA.pm                                      0.02    2004/06/03 revised 0.01
+ t/Tie/FormA.d                                                0.02    2004/06/03 revised 0.01
+ t/Tie/FormA.pm                                               0.02    2004/06/03 revised 0.01
+ t/Tie/FormA.t                                                0.02    2004/06/03 revised 0.01
+ t/Tie/FormA/lenient0.txt                                     0.01    2004/06/01 unchanged
+ t/Tie/FormA/lenient2.txt                                     0.01    2004/06/01 unchanged
+ t/Tie/FormA/strict0.txt                                      0.01    2004/06/01 unchanged
+ t/digest.t                                                   0.01    2004/06/03 new
+ t/File/Digest.pm                                             1.14    2004/05/03 new
+ t/Tie/Test.pm                                                1.25    2004/04/28 unchanged
+ t/Tie/Algorithm/Diff.pm                                      1.15               unchanged
+ t/Tie/File/SmartNL.pm                                        1.16    2004/05/24 unchanged
+ t/Tie/File/Package.pm                                        1.18    2004/05/24 unchanged
+ t/Tie/Test/Tech.pm                                           1.27    2004/05/28 unchanged
+ t/Tie/Data/Secs2.pm                                          1.26    2004/05/24 unchanged
+ t/Tie/Data/Str2Num.pm                                        0.08    2004/05/24 unchanged
 
 
 =head2 3.3 Changes
@@ -345,13 +355,13 @@ Enter one of the following repositories in a web browser:
   http://www.softwarediamonds/packages/
   http://www.perl.com/CPAN/authors/id/S/SO/SOFTDIA/
 
-Right click on 'Tie-FormA-0.01.tar.gz' and download to a temporary
+Right click on 'Tie-FormA-0.02.tar.gz' and download to a temporary
 installation directory.
 Enter the following where $make is 'nmake' for microsoft
 windows; otherwise 'make'.
 
- gunzip Tie-FormA-0.01.tar.gz
- tar -xf Tie-FormA-0.01.tar
+ gunzip Tie-FormA-0.02.tar.gz
+ tar -xf Tie-FormA-0.02.tar
  perl Makefile.PL
  $make test
  $make install
@@ -377,6 +387,7 @@ None.
 Most Perl installation software will run the following test script(s)
 as part of the installation:
 
+ t/digest.t
  t/Tie/FormA.t
 
 =item Installation support.
@@ -393,6 +404,8 @@ contact
 There are no known open issues.
 
 =head1 4.0 NOTES
+
+=head2 Acronyms
 
 The following are useful acronyms:
 
@@ -412,9 +425,35 @@ extension for a Perl test script file
 
 =back
 
+=head2 Construction of Words
+
+The construction of the words "shall", "may" and "should"
+shall[1] conform to United States (US) Departmart of Defense (DoD)
+L<STD490A 3.2.3.6|Docs::US_DOD::STD490A/3.2.3.6>
+which is more precise and even consistent, at times, with
+RFC 2119, http://www.ietf.org/rfc/rfc2119.txt
+Binding requirements shall[2] be uniquely identified by
+the construction "shall[\d+]" , where "\d+" is an unique number
+for each paragraph(s) uniquely identified by a header.
+The construction of commonly used words and phrasing
+shall[3] conform to US DoD 
+L<STD490A 3.2.3.5|Docs::US_DOD::STD490A/3.2.3.5 Commonly used words and phrasing.>
+In accordance with US Dod L<STD490A 3.2.6|Docs::US_DOD::STD490A/3.2.6 Underlining.>,
+requirments shall[4] not be emphazied by underlining and capitalization.
+All of the requirements are important in obtaining
+the desired performance.
+
+Unless otherwise specified, in accordance with Software Diamonds' License, 
+Software Diamonds shall[5] not be responsible for this program module conforming to all the
+specified requirements, binding or otherwise.
+
 =head1 2.0 SEE ALSO
 
-L<Tie::FormA|Tie::FormA>
+=over 4
+
+=item L<Tie::FormA|Tie::FormA>
+
+=back
 
 =for html
 
@@ -425,14 +464,15 @@ L<Tie::FormA|Tie::FormA>
 
 __DATA__
 
+USE: ExtUtils::SVDmaker^
+UUT: Tie::FormA^
 DISTNAME: Tie-FormA^
 REPOSITORY_DIR: packages^
 
-VERSION : 0.01^
+VERSION : 0.02^
 FREEZE: 1^
-PREVIOUS_DISTNAME: Tie-Form^
-PREVIOUS_RELEASE: 0.02^
-REVISION: - ^
+PREVIOUS_DISTNAME: ^
+PREVIOUS_RELEASE: 0.01^
 
 AUTHOR  : SoftwareDiamonds.com E<lt> support@SoftwareDiamonds.comE <gt>^
 ABSTRACT: 
@@ -441,7 +481,7 @@ appear in the data. The text file resembles mimics hard copy
 forms. There is a very liberal acceptance of separation sequences.
 ^
 
-TITLE   : Tie::FormA - Text Database that mimics a Form^
+TITLE   : ${UUT} - Text Database that mimics a Form^
 END_USER: General Public^
 COPYRIGHT: copyright © 2003 Software Diamonds^
 CLASSIFICATION: NONE^
@@ -465,9 +505,11 @@ lib/Tie/FormA.pm
 lib/Bundle/Tie/FormA.pm
 t/Tie/FormA*
 t/Tie/FormA/*
+bin/digest.t => t/digest.t
 ^
 
 REPLACE: 
+lib/File/Digest.pm => t/File/Digest.pm
 libperl/Test.pm => t/Tie/Test.pm
 libperl/Algorithm/Diff.pm  => t/Tie/Algorithm/Diff.pm
 lib/File/SmartNL.pm => t/Tie/File/SmartNL.pm
@@ -482,8 +524,12 @@ PREREQ_PM:
 'Data::Startup' => '0.08',
 ^
 
+TESTS:
+t/digest.t
+t/Tie/FormA.t
+^
+
 README_PODS: lib/Tie/FormA.pm ^
-TESTS: t/Tie/FormA.t ^
 STDS: t::Tie::FormA ^
 BUNDLE: Tie::FormA ^
 EXE_FILES:  ^
@@ -592,12 +638,12 @@ following conditions are met:
 \=item 1
 
 Redistributions of source code, modified or unmodified
-must retain the above copyright notice, this list of
+shall[1] retain the above copyright notice, this list of
 conditions and the following disclaimer. 
 
 \=item 2
 
-Redistributions in binary form must 
+Redistributions in binary form shall[2]
 reproduce the above copyright notice,
 this list of conditions and the following 
 disclaimer in the documentation and/or
@@ -609,24 +655,30 @@ distribution.
 In addition to condition (1) and (2),
 commercial installation of a software product
 with the binary or source code embedded in the
-software product or a software product of the
+software product or a software product of
 binary or source code, with or without modifications,
-must visually present to the installer 
+shall[3] visually present to the installer 
 the above copyright notice,
 this list of conditions intact,
 that the original source is available
 at http://packages.softwarediamonds.com
 and provide means for the installer to actively accept
 the list of conditions; 
-otherwise, the commerical activity,
+otherwise, the commercial activity,
 as determined by Software Diamonds and
 published at http://packages.softwarediamonds.com, 
-shall pay a license fee to
-Software Diamonds and shall make donations,
+shall[4] pay a license fee to
+Software Diamonds and shall[5] make donations,
 to open source repositories carrying
 the source code.
 
 \=back
+
+The construction of the word "shall[x]" is always mandatory 
+and not merely directory and identifies each binding
+requirement of this License. 
+It is the responsibility of the licensee to
+conform to all requirements.
 
 SOFTWARE DIAMONDS, http://www.SoftwareDiamonds.com,
 PROVIDES THIS SOFTWARE 
@@ -682,16 +734,16 @@ not install, download and install unxutils from
 SUPPORT: 603 882-0846 E<lt>support@SoftwareDiamonds.comE<gt>
 ^
 
-
-PROBLEMS:
-There are no known open issues.
-^
+PROBLEMS: There are no known open issues.^
 
 SUPPORT:
 603 882-0846 E<lt>support@SoftwareDiamonds.comE<gt>
 ^
 
 NOTES:
+
+\=head2 Acronyms
+
 The following are useful acronyms:
 
 \=over 4
@@ -709,18 +761,136 @@ extension for a Perl Library Module
 extension for a Perl test script file
 
 \=back
+
+\=head2 Construction of Words
+
+The construction of the words "shall", "may" and "should"
+shall[1] conform to United States (US) Departmart of Defense (DoD)
+L<STD490A 3.2.3.6|Docs::US_DOD::STD490A/3.2.3.6>
+which is more precise and even consistent, at times, with
+RFC 2119, http://www.ietf.org/rfc/rfc2119.txt
+Binding requirements shall[2] be uniquely identified by
+the construction "shall[\d+]" , where "\d+" is an unique number
+for each paragraph(s) uniquely identified by a header.
+The construction of commonly used words and phrasing
+shall[3] conform to US DoD 
+L<STD490A 3.2.3.5|Docs::US_DOD::STD490A/3.2.3.5 Commonly used words and phrasing.>
+In accordance with US Dod L<STD490A 3.2.6|Docs::US_DOD::STD490A/3.2.6 Underlining.>,
+requirments shall[4] not be emphazied by underlining and capitalization.
+All of the requirements are important in obtaining
+the desired performance.
+
+Unless otherwise specified, in accordance with Software Diamonds' License, 
+Software Diamonds shall[5] not be responsible for this program module conforming to all the
+specified requirements, binding or otherwise.
 ^
 
 SEE_ALSO:
 
-L<Tie::FormA|Tie::FormA>
+\=over 4
 
+\=item L<Tie::FormA|Tie::FormA>
+
+\=back
 
 ^
 
-HTML: 
-^
+HTML: ^
 ~-~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

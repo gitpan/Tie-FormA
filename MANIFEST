@@ -10,6 +10,8 @@ t/Tie/FormA.t
 t/Tie/FormA/lenient0.txt
 t/Tie/FormA/lenient2.txt
 t/Tie/FormA/strict0.txt
+t/digest.t
+t/File/Digest.pm
 t/Tie/Test.pm
 t/Tie/Algorithm/Diff.pm
 t/Tie/File/SmartNL.pm
@@ -18,3 +20,4 @@ t/Tie/Test/Tech.pm
 t/Tie/Data/Secs2.pm
 t/Tie/Data/Str2Num.pm
 FormA.pod
+digest.txt

@@ -14,8 +14,8 @@ use 5.001;
 
 
 use vars qw($VERSION $DATE);
-$VERSION = '0.01';
-$DATE = '2004/06/01';
+$VERSION = '0.02';
+$DATE = '2004/06/03';
 
 use Data::Startup 0.08;
 use Tie::Layers 0.06 qw(is_handle);
@@ -1260,17 +1260,27 @@ distribution file.
 
 =head1 NOTES
 
-=head2 Binding Requirements
+=head2 Construction of Words
 
-Binding requirements are indexed with the
-pharse 'shall[\d+]' where \d+ is an unique number
-for each header section.
-This conforms to standard federal
-government practices, L<STD490A 3.2.3.6|Docs::US_DOD::STD490A/3.2.3.6>
-and is consistent with RFC 2119, http://www.ietf.org/rfc/rfc2119.txt
+The construction of the words "shall", "may" and "should"
+shall[1] conform to United States (US) Departmart of Defense (DoD)
+L<STD490A 3.2.3.6|Docs::US_DOD::STD490A/3.2.3.6>
+which is more precise and even consistent, at times, with
+RFC 2119, http://www.ietf.org/rfc/rfc2119.txt
+Binding requirements shall[2] be uniquely identified by
+the construction "shall[\d+]" , where "\d+" is an unique number
+for each paragraph(s) uniquely identified by a header.
+The construction of commonly used words and phrasing
+shall[3] conform to US DoD 
+L<STD490A 3.2.3.5|Docs::US_DOD::STD490A/3.2.3.5 Commonly used words and phrasing.>
+In accordance with US Dod L<STD490A 3.2.6|Docs::US_DOD::STD490A/3.2.6 Underlining.>,
+requirments shall[4] not be emphazied by underlining and capitalization.
+All of the requirements are important in obtaining
+the desired performance.
 
-In accordance with the License, Software Diamonds
-is not liable for any requirement, binding or otherwise.
+Unless otherwise specified, in accordance with the Software Diamonds' License, 
+Software Diamonds shall[5] not be responsible for this program module conforming to all the
+specified requirements, binding or otherwise.
 
 =head2 Author
 
@@ -1320,15 +1330,21 @@ that the original source is available
 at http://packages.softwarediamonds.com
 and provide means for the installer to actively accept
 the list of conditions; 
-otherwise, the commerical activity,
+otherwise, the commercial activity,
 as determined by Software Diamonds and
 published at http://packages.softwarediamonds.com, 
-shall pay a license fee to
-Software Diamonds and shall make donations,
+shall[1] pay a license fee to
+Software Diamonds and shall[2] make donations,
 to open source repositories carrying
 the source code.
 
 =back
+
+The construction of the word "shall[x]" is always mandatory 
+and not merely directory and identifies each binding
+requirement of this License. 
+It is the responsibility of the licensee to
+conform to all requirements.
 
 SOFTWARE DIAMONDS, http://www.SoftwareDiamonds.com,
 PROVIDES THIS SOFTWARE 

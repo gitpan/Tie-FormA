@@ -7,50 +7,42 @@ FormA - Complete Software Test Description for the Tie::FormA Program Module
 
 =head1 TITLE PAGE
 
- Detailed Software Test Description (STD)
+Detailed Software Test Description (STD)
 
- for
+for
 
- Complete Test of the Perl Tie::FormA Program Module
+Complete Test of the Perl Tie::FormA Program Module
 
- Revision: -
+Revision: -
 
- Version: 
+Version: 
 
- Date: 2004/06/01
+Date: 2004/06/02
 
- Prepared for: General Public 
+Prepared for: General Public 
 
- Prepared by:  http://www.SoftwareDiamonds.com support@SoftwareDiamonds.com
+Prepared by:  http://www.SoftwareDiamonds.com support@SoftwareDiamonds.com
 
- Classification: None
+Classification: None
 
-#######
-#  
-#  1. SCOPE
-#
 =head1 1.0 SCOPE
 
 This document establishes detail Software Test Description (STD) for 
 the Complete Test of the Perl L<Tie::FormA|Tie::FormA> program module.
 
-This detail STD, along with the
-L<General Perl Program Module (PM) STD|Test::STD::PerlSTD>
-establishes the full STD for the
-Perl L<Tie::FormA|Tie::FormA> program module (PM)
+This Software Test Description (STD) is a  detail Software Test Description 
+in the form of a STD specification sheet, which is incomplete without
+reference to the L<General Perl Program Module STD|Test::STD::PerlSTD> specification.
+This detail STD and the
+L<General Perl Program Module STD|Test::STD::PerlSTD>
+constitute the total requirements for the
+Perl L<Tie::FormA|Tie::FormA> program module.
 
-#######
-#  
-#  3.0 TEST PREPARATIONS
-#
+
 =head1 3.0 TEST PREPARATIONS
 
-Test preparations are as specified in the L<general STD|Test::STD::PerlSTD>.
+Test preparations are as specified in the L<General Perl Program Module STD|Test::STD::PerlSTD>.
 
-#######
-#  
-#  4.0 TEST DESCRIPTIONS
-#
 =head1 4.0 TEST DESCRIPTIONS
 
 The test descriptions uses a legend to
@@ -58,13 +50,13 @@ identify different aspects of a test description
 in accordance with
 L<STD PM Form Database Test Description Fields|Test::STDmakerA/STD PM Form Database Test Description Fields>.
 
-4.${Test_Number} Complete Test
+=head2 4.1 Complete Test
 
 This test verifies both the lenient
 and strict formats of the 
 C<Tie::FormA> program module.
 
-=head2 4.1.1 UUT not loaded - ok: 1
+=head2 4.1.1 UUT not loaded
 
 
   C:
@@ -118,7 +110,6 @@ C<Tie::FormA> program module.
     'HTTP_REFERER',
     'http://computerdiamonds.com/',
  ],
-   
  [   'EOF',
       '\n',
      'EOL',
@@ -154,7 +145,7 @@ C<Tie::FormA> program module.
  SE:  ''^
  ok: 1^
 
-=head2 4.1.2 Load UUT - ok: 2
+=head2 4.1.2 Load UUT
 
   N: Load UUT^
   C: my $errors = $fp->load_package($uut)^
@@ -162,14 +153,14 @@ C<Tie::FormA> program module.
  SE: ''^
  ok: 2^
 
-=head2 4.1.3 Tie::FormA Version $Tie::FormA::VERSION loaded - ok: 3
+=head2 4.1.3 Tie::FormA Version $Tie::FormA::VERSION loaded
 
   N: Tie::FormA Version $Tie::FormA::VERSION loaded^
   A: $fp->is_package_loaded($uut)^
   E: 1^
  ok: 3^
 
-=head2 4.1.4 Read lenient FormA - ok: 4
+=head2 4.1.4 Read lenient FormA
 
   N: Read lenient FormA^
 
@@ -196,7 +187,7 @@ C<Tie::FormA> program module.
   E: [@test_data1]^
  ok: 4^
 
-=head2 4.1.5 Write lenient FormA - ok: 5
+=head2 4.1.5 Write lenient FormA
 
   N: Write lenient FormA^
 
@@ -221,7 +212,7 @@ C<Tie::FormA> program module.
   E: File::SmartNL->fin($lenient_expected_file)^
  ok: 5^
 
-=head2 4.1.6 Read strict FormA - ok: 6
+=head2 4.1.6 Read strict FormA
 
   N: Read strict FormA^
 
@@ -248,7 +239,7 @@ C<Tie::FormA> program module.
   E: [@test_data1]^
  ok: 6^
 
-=head2 4.1.7 Write strict FormA - ok: 7
+=head2 4.1.7 Write strict FormA
 
   N: Write strict FormA^
 
@@ -275,225 +266,249 @@ C<Tie::FormA> program module.
 
 
 
-#######
-#  
-#  5.0 REQUIREMENTS TRACEABILITY
-#
 =head1 5.0 REQUIREMENTS TRACEABILITY
 
-=head2 Requirement to Test Case Tracebility
+=head2 5.1 Requirement to Test Case Tracebility
 
-over 4 
+=over 4
 
-=item L<format [1] - separator strings|Tie::FormA/format [1] - separator strings>
+=item Requirement L<format [1] - separator strings|Tie::FormA/format [1] - separator strings>
 
-L<4.1.4 Read lenient FormA|FormA/4.1.4 Read lenient FormA - ok: 4>
+Test Case L<4.1.4 Read lenient FormA|/4.1.4 Read lenient FormA>
 
-L<4.1.5 Write lenient FormA|FormA/4.1.5 Write lenient FormA - ok: 5>
+Test Case L<4.1.5 Write lenient FormA|/4.1.5 Write lenient FormA>
 
-L<4.1.6 Read strict FormA|FormA/4.1.6 Read strict FormA - ok: 6>
+Test Case L<4.1.6 Read strict FormA|/4.1.6 Read strict FormA>
 
-L<4.1.7 Write strict FormA|FormA/4.1.7 Write strict FormA - ok: 7>
+Test Case L<4.1.7 Write strict FormA|/4.1.7 Write strict FormA>
 
-=item L<format [2] - separator escapes|Tie::FormA/format [2] - separator escapes>
+=item Requirement L<format [2] - separator escapes|Tie::FormA/format [2] - separator escapes>
 
-L<4.1.5 Write lenient FormA|FormA/4.1.5 Write lenient FormA - ok: 5>
+Test Case L<4.1.5 Write lenient FormA|/4.1.5 Write lenient FormA>
 
-L<4.1.6 Read strict FormA|FormA/4.1.6 Read strict FormA - ok: 6>
+Test Case L<4.1.6 Read strict FormA|/4.1.6 Read strict FormA>
 
-L<4.1.7 Write strict FormA|FormA/4.1.7 Write strict FormA - ok: 7>
+Test Case L<4.1.7 Write strict FormA|/4.1.7 Write strict FormA>
 
-=item L<format [2] - separator escape|Tie::FormA/format [2] - separator escapes>
+=item Requirement L<format [2] - separator escape|Tie::FormA/format [2] - separator escapes>
 
-L<4.1.4 Read lenient FormA|FormA/4.1.4 Read lenient FormA - ok: 4>
+Test Case L<4.1.4 Read lenient FormA|/4.1.4 Read lenient FormA>
 
-=item L<format [3] - field names|Tie::FormA/format [3] - field names>
+=item Requirement L<format [3] - field names|Tie::FormA/format [3] - field names>
 
-L<4.1.4 Read lenient FormA|FormA/4.1.4 Read lenient FormA - ok: 4>
+Test Case L<4.1.4 Read lenient FormA|/4.1.4 Read lenient FormA>
 
-L<4.1.5 Write lenient FormA|FormA/4.1.5 Write lenient FormA - ok: 5>
+Test Case L<4.1.5 Write lenient FormA|/4.1.5 Write lenient FormA>
 
-L<4.1.6 Read strict FormA|FormA/4.1.6 Read strict FormA - ok: 6>
+Test Case L<4.1.6 Read strict FormA|/4.1.6 Read strict FormA>
 
-L<4.1.7 Write strict FormA|FormA/4.1.7 Write strict FormA - ok: 7>
+Test Case L<4.1.7 Write strict FormA|/4.1.7 Write strict FormA>
 
-=item L<format [4] - field names|Tie::FormA/format [4] - field names>
+=item Requirement L<format [4] - field names|Tie::FormA/format [4] - field names>
 
-L<4.1.4 Read lenient FormA|FormA/4.1.4 Read lenient FormA - ok: 4>
+Test Case L<4.1.4 Read lenient FormA|/4.1.4 Read lenient FormA>
 
-L<4.1.5 Write lenient FormA|FormA/4.1.5 Write lenient FormA - ok: 5>
+Test Case L<4.1.5 Write lenient FormA|/4.1.5 Write lenient FormA>
 
-L<4.1.6 Read strict FormA|FormA/4.1.6 Read strict FormA - ok: 6>
+Test Case L<4.1.6 Read strict FormA|/4.1.6 Read strict FormA>
 
-L<4.1.7 Write strict FormA|FormA/4.1.7 Write strict FormA - ok: 7>
+Test Case L<4.1.7 Write strict FormA|/4.1.7 Write strict FormA>
 
-=item L<format [5] - EON|Tie::FormA/format [5] - EON>
+=item Requirement L<format [5] - EON|Tie::FormA/format [5] - EON>
 
-L<4.1.4 Read lenient FormA|FormA/4.1.4 Read lenient FormA - ok: 4>
+Test Case L<4.1.4 Read lenient FormA|/4.1.4 Read lenient FormA>
 
-L<4.1.5 Write lenient FormA|FormA/4.1.5 Write lenient FormA - ok: 5>
+Test Case L<4.1.5 Write lenient FormA|/4.1.5 Write lenient FormA>
 
-L<4.1.6 Read strict FormA|FormA/4.1.6 Read strict FormA - ok: 6>
+Test Case L<4.1.6 Read strict FormA|/4.1.6 Read strict FormA>
 
-L<4.1.7 Write strict FormA|FormA/4.1.7 Write strict FormA - ok: 7>
+Test Case L<4.1.7 Write strict FormA|/4.1.7 Write strict FormA>
 
-=item L<format [6] - Strict EOD|Tie::FormA/format [6] - Strict EOD>
+=item Requirement L<format [6] - Strict EOD|Tie::FormA/format [6] - Strict EOD>
 
-L<4.1.6 Read strict FormA|FormA/4.1.6 Read strict FormA - ok: 6>
+Test Case L<4.1.6 Read strict FormA|/4.1.6 Read strict FormA>
 
-L<4.1.7 Write strict FormA|FormA/4.1.7 Write strict FormA - ok: 7>
+Test Case L<4.1.7 Write strict FormA|/4.1.7 Write strict FormA>
 
-=item L<format [7] - Lenient EOD|Tie::FormA/format [7] - Lenient EOD>
+=item Requirement L<format [7] - Lenient EOD|Tie::FormA/format [7] - Lenient EOD>
 
-L<4.1.4 Read lenient FormA|FormA/4.1.4 Read lenient FormA - ok: 4>
+Test Case L<4.1.4 Read lenient FormA|/4.1.4 Read lenient FormA>
 
-L<4.1.5 Write lenient FormA|FormA/4.1.5 Write lenient FormA - ok: 5>
+Test Case L<4.1.5 Write lenient FormA|/4.1.5 Write lenient FormA>
 
-=item L<methods [1] - encode_field|Tie::FormA/methods [1] - encode_field>
+=item Requirement L<methods [1] - encode_field|Tie::FormA/methods [1] - encode_field>
 
-L<4.1.5 Write lenient FormA|FormA/4.1.5 Write lenient FormA - ok: 5>
+Test Case L<4.1.5 Write lenient FormA|/4.1.5 Write lenient FormA>
 
-L<4.1.7 Write strict FormA|FormA/4.1.7 Write strict FormA - ok: 7>
+Test Case L<4.1.7 Write strict FormA|/4.1.7 Write strict FormA>
 
-=item L<methods [2] - decode_field|Tie::FormA/methods [2] - decode_field>
+=item Requirement L<methods [2] - decode_field|Tie::FormA/methods [2] - decode_field>
 
-L<4.1.4 Read lenient FormA|FormA/4.1.4 Read lenient FormA - ok: 4>
+Test Case L<4.1.4 Read lenient FormA|/4.1.4 Read lenient FormA>
 
-L<4.1.6 Read strict FormA|FormA/4.1.6 Read strict FormA - ok: 6>
+Test Case L<4.1.6 Read strict FormA|/4.1.6 Read strict FormA>
 
-=item L<methods [3] - encode_record|Tie::FormA/methods [3] - encode_record>
+=item Requirement L<methods [3] - encode_record|Tie::FormA/methods [3] - encode_record>
 
-L<4.1.5 Write lenient FormA|FormA/4.1.5 Write lenient FormA - ok: 5>
+Test Case L<4.1.5 Write lenient FormA|/4.1.5 Write lenient FormA>
 
-L<4.1.7 Write strict FormA|FormA/4.1.7 Write strict FormA - ok: 7>
+Test Case L<4.1.7 Write strict FormA|/4.1.7 Write strict FormA>
 
-=item L<methods [4] - decode_record|Tie::FormA/methods [4] - decode_record>
+=item Requirement L<methods [4] - decode_record|Tie::FormA/methods [4] - decode_record>
 
-L<4.1.4 Read lenient FormA|FormA/4.1.4 Read lenient FormA - ok: 4>
+Test Case L<4.1.4 Read lenient FormA|/4.1.4 Read lenient FormA>
 
-L<4.1.6 Read strict FormA|FormA/4.1.6 Read strict FormA - ok: 6>
+Test Case L<4.1.6 Read strict FormA|/4.1.6 Read strict FormA>
 
-=item L<methods [5] - put_record|Tie::FormA/methods [5] - put_record>
+=item Requirement L<methods [5] - put_record|Tie::FormA/methods [5] - put_record>
 
-L<4.1.5 Write lenient FormA|FormA/4.1.5 Write lenient FormA - ok: 5>
+Test Case L<4.1.5 Write lenient FormA|/4.1.5 Write lenient FormA>
 
-L<4.1.7 Write strict FormA|FormA/4.1.7 Write strict FormA - ok: 7>
+Test Case L<4.1.7 Write strict FormA|/4.1.7 Write strict FormA>
 
-=item L<methods [6] - get_record|Tie::FormA/methods [6] - get_record>
+=item Requirement L<methods [6] - get_record|Tie::FormA/methods [6] - get_record>
 
-L<4.1.4 Read lenient FormA|FormA/4.1.4 Read lenient FormA - ok: 4>
+Test Case L<4.1.4 Read lenient FormA|/4.1.4 Read lenient FormA>
 
-L<4.1.6 Read strict FormA|FormA/4.1.6 Read strict FormA - ok: 6>
+Test Case L<4.1.6 Read strict FormA|/4.1.6 Read strict FormA>
 
-=item L<methods [7] - get_record|Tie::FormA/methods [7] - get_record>
+=item Requirement L<methods [7] - get_record|Tie::FormA/methods [7] - get_record>
 
-L<4.1.4 Read lenient FormA|FormA/4.1.4 Read lenient FormA - ok: 4>
+Test Case L<4.1.4 Read lenient FormA|/4.1.4 Read lenient FormA>
 
-L<4.1.6 Read strict FormA|FormA/4.1.6 Read strict FormA - ok: 6>
+Test Case L<4.1.6 Read strict FormA|/4.1.6 Read strict FormA>
 
 =back 
 
 
 
-=head2 Test Case to Requirement Tracebility
+=head2 5.2 Test Case to Requirement Tracebility
 
-over 4 
+=over 4
 
-=item L<4.1.4 Read lenient FormA|FormA/4.1.4 Read lenient FormA - ok: 4>
+=item Test Case L<4.1.4 Read lenient FormA|/4.1.4 Read lenient FormA>
 
-L<format [1] - separator strings|Tie::FormA/format [1] - separator strings>
+Requirement L<format [1] - separator strings|Tie::FormA/format [1] - separator strings>
 
-L<format [2] - separator escape|Tie::FormA/format [2] - separator escapes>
+Requirement L<format [2] - separator escape|Tie::FormA/format [2] - separator escapes>
 
-L<format [3] - field names|Tie::FormA/format [3] - field names>
+Requirement L<format [3] - field names|Tie::FormA/format [3] - field names>
 
-L<format [4] - field names|Tie::FormA/format [4] - field names>
+Requirement L<format [4] - field names|Tie::FormA/format [4] - field names>
 
-L<format [5] - EON|Tie::FormA/format [5] - EON>
+Requirement L<format [5] - EON|Tie::FormA/format [5] - EON>
 
-L<format [7] - Lenient EOD|Tie::FormA/format [7] - Lenient EOD>
+Requirement L<format [7] - Lenient EOD|Tie::FormA/format [7] - Lenient EOD>
 
-L<methods [2] - decode_field|Tie::FormA/methods [2] - decode_field>
+Requirement L<methods [2] - decode_field|Tie::FormA/methods [2] - decode_field>
 
-L<methods [4] - decode_record|Tie::FormA/methods [4] - decode_record>
+Requirement L<methods [4] - decode_record|Tie::FormA/methods [4] - decode_record>
 
-L<methods [6] - get_record|Tie::FormA/methods [6] - get_record>
+Requirement L<methods [6] - get_record|Tie::FormA/methods [6] - get_record>
 
-L<methods [7] - get_record|Tie::FormA/methods [7] - get_record>
+Requirement L<methods [7] - get_record|Tie::FormA/methods [7] - get_record>
 
-=item L<4.1.5 Write lenient FormA|FormA/4.1.5 Write lenient FormA - ok: 5>
+=item Test Case L<4.1.5 Write lenient FormA|/4.1.5 Write lenient FormA>
 
-L<format [1] - separator strings|Tie::FormA/format [1] - separator strings>
+Requirement L<format [1] - separator strings|Tie::FormA/format [1] - separator strings>
 
-L<format [2] - separator escapes|Tie::FormA/format [2] - separator escapes>
+Requirement L<format [2] - separator escapes|Tie::FormA/format [2] - separator escapes>
 
-L<format [3] - field names|Tie::FormA/format [3] - field names>
+Requirement L<format [3] - field names|Tie::FormA/format [3] - field names>
 
-L<format [4] - field names|Tie::FormA/format [4] - field names>
+Requirement L<format [4] - field names|Tie::FormA/format [4] - field names>
 
-L<format [5] - EON|Tie::FormA/format [5] - EON>
+Requirement L<format [5] - EON|Tie::FormA/format [5] - EON>
 
-L<format [7] - Lenient EOD|Tie::FormA/format [7] - Lenient EOD>
+Requirement L<format [7] - Lenient EOD|Tie::FormA/format [7] - Lenient EOD>
 
-L<methods [1] - encode_field|Tie::FormA/methods [1] - encode_field>
+Requirement L<methods [1] - encode_field|Tie::FormA/methods [1] - encode_field>
 
-L<methods [3] - encode_record|Tie::FormA/methods [3] - encode_record>
+Requirement L<methods [3] - encode_record|Tie::FormA/methods [3] - encode_record>
 
-L<methods [5] - put_record|Tie::FormA/methods [5] - put_record>
+Requirement L<methods [5] - put_record|Tie::FormA/methods [5] - put_record>
 
-=item L<4.1.6 Read strict FormA|FormA/4.1.6 Read strict FormA - ok: 6>
+=item Test Case L<4.1.6 Read strict FormA|/4.1.6 Read strict FormA>
 
-L<format [1] - separator strings|Tie::FormA/format [1] - separator strings>
+Requirement L<format [1] - separator strings|Tie::FormA/format [1] - separator strings>
 
-L<format [2] - separator escapes|Tie::FormA/format [2] - separator escapes>
+Requirement L<format [2] - separator escapes|Tie::FormA/format [2] - separator escapes>
 
-L<format [3] - field names|Tie::FormA/format [3] - field names>
+Requirement L<format [3] - field names|Tie::FormA/format [3] - field names>
 
-L<format [4] - field names|Tie::FormA/format [4] - field names>
+Requirement L<format [4] - field names|Tie::FormA/format [4] - field names>
 
-L<format [5] - EON|Tie::FormA/format [5] - EON>
+Requirement L<format [5] - EON|Tie::FormA/format [5] - EON>
 
-L<format [6] - Strict EOD|Tie::FormA/format [6] - Strict EOD>
+Requirement L<format [6] - Strict EOD|Tie::FormA/format [6] - Strict EOD>
 
-L<methods [2] - decode_field|Tie::FormA/methods [2] - decode_field>
+Requirement L<methods [2] - decode_field|Tie::FormA/methods [2] - decode_field>
 
-L<methods [4] - decode_record|Tie::FormA/methods [4] - decode_record>
+Requirement L<methods [4] - decode_record|Tie::FormA/methods [4] - decode_record>
 
-L<methods [6] - get_record|Tie::FormA/methods [6] - get_record>
+Requirement L<methods [6] - get_record|Tie::FormA/methods [6] - get_record>
 
-L<methods [7] - get_record|Tie::FormA/methods [7] - get_record>
+Requirement L<methods [7] - get_record|Tie::FormA/methods [7] - get_record>
 
-=item L<4.1.7 Write strict FormA|FormA/4.1.7 Write strict FormA - ok: 7>
+=item Test Case L<4.1.7 Write strict FormA|/4.1.7 Write strict FormA>
 
-L<format [1] - separator strings|Tie::FormA/format [1] - separator strings>
+Requirement L<format [1] - separator strings|Tie::FormA/format [1] - separator strings>
 
-L<format [2] - separator escapes|Tie::FormA/format [2] - separator escapes>
+Requirement L<format [2] - separator escapes|Tie::FormA/format [2] - separator escapes>
 
-L<format [3] - field names|Tie::FormA/format [3] - field names>
+Requirement L<format [3] - field names|Tie::FormA/format [3] - field names>
 
-L<format [4] - field names|Tie::FormA/format [4] - field names>
+Requirement L<format [4] - field names|Tie::FormA/format [4] - field names>
 
-L<format [5] - EON|Tie::FormA/format [5] - EON>
+Requirement L<format [5] - EON|Tie::FormA/format [5] - EON>
 
-L<format [6] - Strict EOD|Tie::FormA/format [6] - Strict EOD>
+Requirement L<format [6] - Strict EOD|Tie::FormA/format [6] - Strict EOD>
 
-L<methods [1] - encode_field|Tie::FormA/methods [1] - encode_field>
+Requirement L<methods [1] - encode_field|Tie::FormA/methods [1] - encode_field>
 
-L<methods [3] - encode_record|Tie::FormA/methods [3] - encode_record>
+Requirement L<methods [3] - encode_record|Tie::FormA/methods [3] - encode_record>
 
-L<methods [5] - put_record|Tie::FormA/methods [5] - put_record>
+Requirement L<methods [5] - put_record|Tie::FormA/methods [5] - put_record>
 
 =back 
 
 
 
-#######
-#  
-#  6.0 NOTES
-#
-=head1 NOTES
+=head1 6.0 NOTES
 
-copyright © 2004 Software Diamonds.
+=head2 Construction of Words
+
+The construction of the words "shall", "may" and "should"
+shall[1] conform to United States (US) Departmart of Defense (DoD)
+L<STD490A 3.2.3.6|Docs::US_DOD::STD490A/3.2.3.6>
+which is more precise and even consistent, at times, with
+RFC 2119, http://www.ietf.org/rfc/rfc2119.txt
+Binding requirements shall[2] be uniquely identified by
+the construction "shall[\d+]" , where "\d+" is an unique number
+for each paragraph(s) uniquely identified by a header.
+The construction of commonly used words and phrasing
+shall[3] conform to US DoD 
+L<STD490A 3.2.3.5|Docs::US_DOD::STD490A/3.2.3.5 Commonly used words and phrasing.>
+In accordance with US Dod L<STD490A 3.2.6|Docs::US_DOD::STD490A/3.2.6 Underlining.>,
+requirments shall[4] not be emphazied by underlining and capitalization.
+All of the requirements are important in obtaining
+the desired performance.
+
+Unless otherwise specified, in accordance with Software Diamonds' License, 
+Software Diamonds shall[5] not be responsible for this program module conforming to all the
+specified requirements, binding or otherwise.
+
+=head2 Author
+
+The author, holder of the copyright and maintainer is
+
+E<lt>support@SoftwareDiamonds.comE<gt>
+
+=head2 Copyright
+
+copyright © 2004 SoftwareDiamonds.com
+
+=head2 License
 
 Software Diamonds permits the redistribution
 and use in source and binary forms, with or
@@ -505,12 +520,12 @@ following conditions are met:
 =item 1
 
 Redistributions of source code, modified or unmodified
-must retain the above copyright notice, this list of
+shall[1] retain the above copyright notice, this list of
 conditions and the following disclaimer. 
 
 =item 2
 
-Redistributions in binary form must 
+Redistributions in binary form shall[2]
 reproduce the above copyright notice,
 this list of conditions and the following 
 disclaimer in the documentation and/or
@@ -524,7 +539,7 @@ commercial installation of a software product
 with the binary or source code embedded in the
 software product or a software product of
 binary or source code, with or without modifications,
-must visually present to the installer 
+shall[3] visually present to the installer 
 the above copyright notice,
 this list of conditions intact,
 that the original source is available
@@ -532,9 +547,10 @@ at http://packages.softwarediamonds.com
 and provide means for the installer to actively accept
 the list of conditions; 
 otherwise, the commerical activity,
-as determined by Software Diamonds, 
-shall pay a license fee to
-Software Diamonds and shall make donations,
+as determined by Software Diamonds and
+published at http://packages.softwarediamonds.com, 
+shall[4] pay a license fee to
+Software Diamonds and shall[5] make donations,
 to open source repositories carrying
 the source code.
 
@@ -557,10 +573,6 @@ OR TORT (INCLUDING USE OF THIS SOFTWARE, EVEN IF
 ADVISED OF NEGLIGENCE OR OTHERWISE) ARISING IN
 ANY WAY OUT OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#######
-#
-#  2.0 REFERENCED DOCUMENTS
-#
 =head1 2.0 REFERENCED DOCUMENTS (SEE ALSO)
 
 
@@ -574,7 +586,9 @@ ANY WAY OUT OF THE POSSIBILITY OF SUCH DAMAGE.
 
 =item L<Data::Query|Data::Query>
 
-=back
+=item L<Software Test Description|Docs::US_DOD::STD>
+
+=item L<Specification Practices|Docs::US_DOD::STD490A>
 
 =back
 

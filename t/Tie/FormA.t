@@ -7,8 +7,8 @@ use warnings;
 use warnings::register;
 
 use vars qw($VERSION $DATE $FILE);
-$VERSION = '0.01';   # automatically generated file
-$DATE = '2004/06/01';
+$VERSION = '0.02';   # automatically generated file
+$DATE = '2004/06/03';
 $FILE = __FILE__;
 
 
@@ -154,7 +154,7 @@ my @test_data1 = (
    'HTTP_REFERER',
    'http://computerdiamonds.com/',
 ],
-  
+
 [   'EOF',
      '\n',
     'EOL',
@@ -369,9 +369,41 @@ from the standard output to a log file.
 
 =back
 
-=head1 COPYRIGHT
+=head1 Notes
 
-copyright © 2004 Software Diamonds.
+\=head2 Construction of Words
+
+The construction of the words "shall", "may" and "should"
+shall[1] conform to United States (US) Departmart of Defense (DoD)
+L<STD490A 3.2.3.6|Docs::US_DOD::STD490A/3.2.3.6>
+which is more precise and even consistent, at times, with
+RFC 2119, http://www.ietf.org/rfc/rfc2119.txt
+Binding requirements shall[2] be uniquely identified by
+the construction "shall[\d+]" , where "\d+" is an unique number
+for each paragraph(s) uniquely identified by a header.
+The construction of commonly used words and phrasing
+shall[3] conform to US DoD 
+L<STD490A 3.2.3.5|Docs::US_DOD::STD490A/3.2.3.5 Commonly used words and phrasing.>
+In accordance with US Dod L<STD490A 3.2.6|Docs::US_DOD::STD490A/3.2.6 Underlining.>,
+requirments shall[4] not be emphazied by underlining and capitalization.
+All of the requirements are important in obtaining
+the desired performance.
+
+Unless otherwise specified, in accordance with Software Diamonds' License, 
+Software Diamonds shall[5] not be responsible for this program module conforming to all the
+specified requirements, binding or otherwise.
+
+\=head2 Author
+
+The author, holder of the copyright and maintainer is
+
+E<lt>support@SoftwareDiamonds.comE<gt>
+
+\=head2 Copyright
+
+copyright © 2004 SoftwareDiamonds.com
+
+\=head2 License
 
 Software Diamonds permits the redistribution
 and use in source and binary forms, with or
@@ -383,12 +415,12 @@ following conditions are met:
 \=item 1
 
 Redistributions of source code, modified or unmodified
-must retain the above copyright notice, this list of
+shall[1] retain the above copyright notice, this list of
 conditions and the following disclaimer. 
 
 \=item 2
 
-Redistributions in binary form must 
+Redistributions in binary form shall[2]
 reproduce the above copyright notice,
 this list of conditions and the following 
 disclaimer in the documentation and/or
@@ -402,7 +434,7 @@ commercial installation of a software product
 with the binary or source code embedded in the
 software product or a software product of
 binary or source code, with or without modifications,
-must visually present to the installer 
+shall[3] visually present to the installer 
 the above copyright notice,
 this list of conditions intact,
 that the original source is available
@@ -410,9 +442,10 @@ at http://packages.softwarediamonds.com
 and provide means for the installer to actively accept
 the list of conditions; 
 otherwise, the commerical activity,
-as determined by Software Diamonds, 
-shall pay a license fee to
-Software Diamonds and shall make donations,
+as determined by Software Diamonds and
+published at http://packages.softwarediamonds.com, 
+shall[4] pay a license fee to
+Software Diamonds and shall[5] make donations,
 to open source repositories carrying
 the source code.
 

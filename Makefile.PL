@@ -17,13 +17,13 @@
 
 use ExtUtils::MakeMaker;
 
-my $tests = join ' ',unix2os('t/Tie/FormA.t');
+my $tests = join ' ',unix2os('t/digest.t','t/Tie/FormA.t');
 
 
 WriteMakefile(
     NAME => 'Tie::FormA',
     DISTNAME => 'Tie-FormA',
-    VERSION  => '0.01',
+    VERSION  => '0.02',
     dist     => {COMPRESS => 'gzip',
                 'gz' => 'gz'},
     test     => {TESTS => $tests},

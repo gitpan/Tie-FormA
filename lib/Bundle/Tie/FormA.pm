@@ -3,8 +3,8 @@
 package Bundle::Tie::FormA;
 
 use vars qw($VERSION $DATE);
-$VERSION = '0.01';
-$DATE = '2004/06/01';
+$VERSION = '0.02';
+$DATE = '2004/06/03';
 
 1;
 
@@ -20,9 +20,9 @@ C<perl -MCPAN -e 'install Bundle::Tie::FormA'>
 
 =head1 CONTENTS
 
-Data::Startup 0.08
-
 Tie::Layers 0.06
+
+Data::Startup 0.08
 
 Tie::FormA
 
@@ -31,3 +31,4 @@ Tie::FormA
 This bundle includes all the program modules needed for C<Tie::FormA>.
 
 =cut
+
